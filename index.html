@@ -1,0 +1,40 @@
+<!-- Update 18/1/2026 -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopee Affiliate Tool</title>
+    <style>
+        body { font-family: Arial; max-width: 500px; margin: 50px auto; padding: 20px; background: #ffeaa7; }
+        input, textarea, button { width: 100%; padding: 15px; margin: 10px 0; border-radius: 10px; }
+        button { background: #ee5a24; color: white; border: none; font-size: 18px; }
+        .result { border: 2px solid #00b894; background: #e8f6f3; }
+        h1 { color: #ee5a24; text-align: center; }
+    </style>
+</head>
+<body>
+    <h1>🔥 Shopee Affiliate Tool</h1>
+    <p>ID: <strong>17314740041</strong> | Sub: gist-tool-2026</p>
+    
+    <input type="text" id="link" placeholder="Dán link Shopee...">
+    <button onclick="convert()">Tạo Link Affiliate</button>
+    <textarea id="result" class="result" readonly placeholder="Kết quả..."></textarea>
+    <button onclick="copy()" style="background: #00b894;">Copy Link</button>
+
+    <script>
+        function convert() {
+            const link = document.getElementById('link').value;
+            if (!link) return alert('Dán link Shopee!');
+            const encoded = encodeURIComponent(link);
+            const newLink = `https://s.shopee.vn/an_redir?origin_link=${encoded}&affiliate_id=17314740041&sub_id=gist-tool-2026`;
+            document.getElementById('result').value = newLink;
+        }
+        function copy() {
+            document.getElementById('result').select();
+            document.execCommand('copy');
+            alert('✅ Đã copy!');
+        }
+    </script>
+</body>
+</html>
